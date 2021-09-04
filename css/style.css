@@ -7,3 +7,8 @@ body{
 strong{
     text-decoration: blue;
 }
+h1{
+    text-align: center;
+    font-style: italic;
+    text-decoration: blue;
+}
