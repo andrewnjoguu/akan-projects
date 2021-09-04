@@ -9,8 +9,8 @@ const giveAkan= function (e) {
 
 
     const d = new Date(dob).getDay();
-    console.log(fNames[d])
+    alert("Your Akan name is" + fNames[d])
 }
 
 
-document.querySelector("#frmAkans").addEventListener('sumbit'giveAkan);
+document.querySelector("#frmAkans").addEventListener('sumbit',giveAkan);
