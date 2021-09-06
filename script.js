@@ -1,30 +1,32 @@
-const giveAkan= function (e) {
-    e.preventDefault();
-    const fNames = ["Akosua", "Adwoa", "Abenaa", "Akua" , "Yaa", "Afua", "Ama"]
-    const mNames = ["Kwasi", "Kwadwo", "Kwabena", "Kwaku", "Yaw", "Kofi", "Kwame"]
-    const frm = document.querySelector("#frmAkans")
-    const fd = new FormData(frm)
-    const gender = fd.get("gender");
-    const dob = fd.get("dob")
-    
-    const d = new Date(dob).getDay();
-    //alert("Your Akan name is" + fNames[d])
+const giveAkan = function (e) {
+  e.preventDefault();
+  const fNames = ["Akosua", "Adwoa", "Abenaa", "Akua", "Yaa", "Afua", "Ama"];
+  const mNames = [
+    "Kwasi",
+    "Kwadwo",
+    "Kwabena",
+    "Kwaku",
+    "Yaw",
+    "Kofi",
+    "Kwame",
+  ];
 
-    const successAlert = document.querySelector("success-alert")
+  const dateOfBirth = document.getElementById("dob").value;
+  if (!dateOfBirth) {
+    return alert("Enter Birthday");
+  }
 
-    successAlert.classList.remove("d-none");
-    successAlert.classList.add("d-block")
-    
+  const d = new Date(dateOfBirth).getDay();
+  const fGender = document.getElementById("female").checked;
+  const mGender = document.getElementById("male").checked;
 
-    if(gender = "female") {
-        alert("Your Akan name is" +fNames[d])
-    }else{
-        alert("Your Akan name is" +mNames[d])
-    }
-    //alert("Your Akan name is" + fNames[d])
-  
-    
-}
-    
+  if (fGender ==="female") {
+    alert("Your Akan name is" + fNames[d]);
+  } else if (mGender) {
+    alert("Your Akan name is" + mNames[d]);
+  } else {
+    return alert("Please select gender.");
+  }
+};
 
-document.querySelector("#frmAkans").addEventListener('sumbit',giveAkan);
+document.querySelector("#frmAkans").addEventListener("sumbit", giveAkan);

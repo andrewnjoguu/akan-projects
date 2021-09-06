@@ -19,55 +19,30 @@
            <li>Rank among siblings</li>
        </ol>
        <img src="images/imageakan.jpg" alt="akan">
-       <div class="container">
-         <form id="frmAkans">
-        <div class="row mb-3">
-          <label for="colFormLabelSm" class="col-sm-2 col-form-label col-form-label-sm"><strong>DOB</strong></label>
-          <div class="col-sm-10">
-          <label for="colFormLabel" class="col-sm-2 col-form-label"></label>
-          <div class="col-sm-10">
-            <input type="date" class="form-control" id="colFormLabel" placeholder="col-form-label">
-          </div>
+       <div class="form-div">
+        <div class="form-header">
+          <h2>Kindly enter your date in the form to get your Akan Name</h2>
         </div>
-        <div class="row">
-          <label for="colFormLabelLg" class="col-sm-2 col-form-label col-form-label-lg"><strong>Which country are you from?</strong></label>
-          <div class="col-sm-10">
-            <input type="nations" class="form-control form-control-lg" id="colFormLabelLg" placeholder="col-form-label-lg">
-          </div>
-          <p>Kinldy select your gender below. The names have been written in Yoruba, a traditional West African language but there is English translation</p>
-          <em><strong>Okunrin(Yoruba for male)</strong></em>
-        </label>
-      </div>
-      <div class="form-check">
-        <input class="form-check-input" type="radio" name="gender" id="gridRadios2" value="option2">
-        <label class="form-check-label" for="gridRadios2">
+        <div class="name-form">
+          <form id="frmAkans">
+            <label for="selected-date"><strong>DOB:</strong></label>
+            <input type="date" id="dob" name="dob" value="">
+            <div class="form-radio">
+              <label class="form-check-label" for="male">
+                Male
+              </label>
+              <input class="form-check-input" type="radio" name="gender" id="male">
+            </div>
+            <div class="form-check">
+              <label class="form-check-label" for="female">
+                Female
+              </label>
+              <input class="form-check-input" type="radio" name="gender" id="female">
+            </div>
+            <input type="submit" value="Submit" name="submit">
+          </form>
         </div>
-        <em><strong>Obinrin(French for female)</strong></em>
-      </label>
-    </div>
-    <div class="form-check">
-      <input class="form-check-input" type="radio" name="gender" id="gridRadios2" value="option2">
-      <label class="form-check-label" for="gridRadios2">
       </div>
-
-      <div class="col-auto">
-        <label class="visually-hidden" for="autoSizingSelect">Which country that uses akan names do you resonate with?
-           one being <em><strong>Ghana</strong></em>, two being <em><strong>Ivory Coast</strong></em> ?
-        </label>
-        <select class="form-select" id="Ghana">
-          <option selected>Choose...</option>
-          <option value="Ghana">One</option>
-          <option value="Ivory Coast">Two</option>
-        </select>
-      
-      
-      
-      </div><div class="col-12">
-        <button type="Submit" class="btn btn-primary">Submit</button>
-      </div>
-
-
-        </div>
-        <script src="script.js"></script>
+      <script src="script.js"></script>
   </body>
 </html>
